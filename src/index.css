@@ -1,3 +1,18 @@
+:root{
+  --primary: #4f3bd2;
+  --black: #16202a;
+  --ligh-grey: #f3f9f9;
+  --dark-grey: #a2aab5;
+}
+*, *::before, *::after{
+box-sizing: border-box;
+}
+
+body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{
+margin: 0;
+
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +20,67 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1em;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* enter exit animations */
+@keyframes exit{
+  0% {
+     opacity: 1;
+     transform: scale(1);
+  }
+  25% {
+     /* transform: translateX(10px); */
+     opacity: 1;
+  }
+  75% {
+     /* transform: translateX(-200%); */
+     opacity: 0;
+  }
+  100% {
+     opacity: 0;
+     transform: scale(.2);
+
+  }
+}
+
+@keyframes enter{
+  0%{
+     opacity: 0;
+     transform: translateX(-100%);
+  }
+  100%{
+     opacity: 1;
+     transform: translateX(0);
+     
+  }
+}
+
+@keyframes dropdown-enter{
+  0%{
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dropdown-exit{
+  0%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(-20px);
+  }
 }
