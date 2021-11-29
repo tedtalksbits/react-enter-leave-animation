@@ -3,12 +3,12 @@ import styled from 'styled-components';
 
 const Main = styled.main`
    display: ${({ removeElement }) => (removeElement ? 'none' : 'block')};
-  
-   animation: dropdown-enter cubic-bezier(0.175, 0.885, 0.32, 1.275) .5s forwards;
+   animation: dropdown-enter ease .2s forwards;
    /* add animation name below by replacing exit */
-   animation: ${({ exitAnimation }) => exitAnimation ? 'dropdown-exit .5s ease forwards' : ''};
-
-
+   animation: ${({ exitAnimation }) => exitAnimation ? 'dropdown-exit .2s ease forwards' : ''};
+   overflow: hidden;
+   transition: max-height 0.4s ease-out;
+   background: yellow;
 `
 
 
@@ -30,14 +30,14 @@ const AnimatedComponent = ({ children }) => {
       }, 300)
    }
    return (
-      <>
+      <div>
          <button onClick={() => { show ? removeElement() : showElement() }}>
-            {show ? <i className='bx bxs-chevron-down-circle'></i> : <i className='bx bxs-chevron-up-circle' ></i>}
+            {show ? <i className='bx bxs-chevron-down-circle'></i> : <i className='bx bxs-chevron-right-circle' ></i>}
          </button>
-         <Main removeElement={removeState} exitAnimation={!show} className="dropdown" >
+         <Main removeElement={removeState} exitAnimation={!show} className="dropdown content" >
             {children}
          </Main>
-      </>
+      </div>
    )
 }
 

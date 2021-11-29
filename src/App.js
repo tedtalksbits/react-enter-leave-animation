@@ -19,13 +19,14 @@ function App() {
         <AnimatedAlert />
         <p>proof element is removed from flow</p>
       </section>
-      <section className="example-section">
-        <h1>Drop down example</h1>
+      <section className="example-section" style={{ height: '100vh' }}>
+        <h1>Drop down example </h1><h4>(area is collapsable)</h4>
 
         <AnimatedComponent>
           <h1>Hello 1</h1>
           <h1>Hello 2</h1>
           <h1>Hello 3</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta quis, voluptatibus eius laborum consequuntur aspernatur molestias iure hic delectus!</p>
         </AnimatedComponent>
         <p>proof element is removed from flow</p>
       </section>

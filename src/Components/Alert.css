@@ -21,9 +21,14 @@
    user-select: none;
    color: white;
    margin: 2rem 0;
+   transition: all .3s linear;
 
 }
-button:active, button:hover{
-   transform: scale(1.03);
+button:hover{
    filter: brightness(1.2);
 }
+button:active{
+   transform: scale(.98);
+   /* padding: .8rem 2.4rem; */
+   filter: contrast(1.3);
+} 
